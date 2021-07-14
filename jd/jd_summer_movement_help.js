@@ -18,7 +18,7 @@ if ($.isNode() && process.env.summer_movement_ShHelpFlag) {
   summer_movement_ShHelpFlag = process.env.summer_movement_ShHelpFlag;
 }
 
-const ShHelpAuthorFlag = true;//是否助力作者SH  true 助力，false 不助力
+const ShHelpAuthorFlag = false;//是否助力作者SH  true 助力，false 不助力
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [];
 $.cookie = '';
@@ -86,7 +86,7 @@ const UA = $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT :
     res2 = await getAuthorShareCode('https://ghproxy.com/https://raw.githubusercontent.com/yuannian1112/jd_scripts/main/summer_movement.json');
   }
   $.ShInviteLists = []
-  $.ShInviteLists = ['H8mphLbwLg-gedaZQdNmhF50hyThIOTt']
+  $.ShInviteLists = ['']
   if (ShHelpAuthorFlag) {
     $.innerShInviteLists = getRandomArrayElements([...res, ...res2], [...res, ...res2].length);
     $.ShInviteLists.push(...$.ShInviteList,...$.innerShInviteList,...$.innerShInviteLists);
